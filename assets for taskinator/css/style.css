@@ -1,0 +1,290 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  /*!
+ * Bootstrap v4.3.1 (https://getbootstrap.com/)
+ * Copyright 2011-2019 The Bootstrap Authors
+ * Copyright 2011-2019 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+:root {
+  --yellow: #FFAC00;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; }
+
+/*for custom fonts*/
+@font-face {
+    font-family: 'mustardo';
+    src: url('../fonts/mustardo/mustardo-webfont.woff2') format('woff2'),
+         url('../fonts/mustardo/mustardo-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-family: sans-serif;
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
+
+article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
+  display: block; }
+
+  
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #e5e5e5;
+    text-align: left; 
+  }
+  
+  [tabindex="-1"]:focus {
+    outline: 0 !important; }
+  
+  
+  header {
+    background: var(--secondary);
+    padding: 30px 25px;
+    border-bottom: 5px solid var(--primary);
+  }
+  
+  header p {
+    color: var(--tertiary);
+    margin: 5px 0 20px;
+    font-size: 2rem;
+  }
+  
+  p,
+  li {
+    font-size: 1.6rem;
+  }
+  
+  form {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+  
+  form input {
+    outline: none;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 2.2rem;
+    border: 2px solid var(--grey);
+    border-radius: 12px;
+  }
+  
+  form .form-group {
+    margin: 10px 6px 10px 0;
+    flex: 1;
+  }
+  
+  footer {
+    width: 100%;
+    background: var(--secondary);
+    color: var(--tertiary);
+    font-size: 2.4rem;
+    padding: 20px;
+    border-top: 5px solid var(--primary);
+  }
+  
+  .page-title {
+    color: var(--primary);
+    margin-bottom: 5px;
+    margin-top: 0;
+    font-size: 4.5rem;
+  }
+  
+  .page-content {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 25px auto;
+    width: 95%;
+  }
+  
+  .task-list-wrapper {
+    flex: 1;
+    margin: 0 20px 20px;
+  }
+  
+  .list-title {
+    color: var(--secondary);
+    font-size: 2.6rem;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 15px;
+    height: calc(100% - 50px);
+    background: rgb(196, 196, 196);
+    border-radius: 12px;
+    border: 2px solid var(--grey);
+  }
+  
+  .task-item {
+    color: var(--grey);
+    padding: 15px 15px;
+    border: 2px solid var(--grey);
+    background: var(--tertiary);
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .task-name {
+    margin: 0;
+    font-size: 1.8rem;
+  }
+  
+  .task-type {
+    color: var(--secondary);
+    font-size: 1.55rem;
+  }
+  .task-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 0 5px 0;
+    justify-content: space-between;
+  }
+  
+  .task-actions button,
+  .task-actions select {
+    flex: 1;
+  }
+  
+  .btn {
+    outline: none;
+    border: none;
+    display: inline-block;
+    padding: 10px 15px;
+    background: var(--primary);
+    font-size: 2.2rem;
+    border-radius: 12px;
+    position: relative;
+    top: -3px;
+    box-shadow: 0 3px var(--grey);
+  }
+  
+  .btn:hover {
+    box-shadow: 0 2px var(--grey);
+    top: -2px;
+  }
+  .btn:active {
+    box-shadow: 0 0px var(--grey);
+    top: 0;
+  }
+  
+  .edit-btn,
+  .delete-btn {
+    font-size: 1.4rem;
+    padding: 5px 7px;
+    margin: 3px;
+    background: var(--secondary);
+    color: #fff;
+  }
+  
+  .select-dropdown,
+  .select-status {
+    display: block;
+    font-size: 2.2rem;
+    color: #444;
+    padding: 12px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+    border: 2px solid var(--grey);
+    border-radius: 12px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color: #fff;
+    background-image: url("../images/select-arrow.svg");
+    background-repeat: no-repeat, repeat;
+    background-position: right 0.7em top 50%, 0 0;
+    background-size: 0.65em auto, 100%;
+  }
+  
+  .select-status {
+    font-size: 1.4rem;
+    padding: 4px 28px 4px 4px;
+    width: auto;
+  }
+  
+  .select-dropdown::-ms-expand,
+  .select-status::-ms-expand {
+    display: none;
+  }
+  
+  .select-dropdown:hover,
+  .select-status:hover {
+    border-color: #888;
+  }
+  
+  .select-dropdown:focus,
+  .select-status:focus {
+    border-color: #aaa;
+    box-shadow: 0 0 1px 3px rgba(59, 153, 252, 0.7);
+    box-shadow: 0 0 0 3px -moz-mac-focusring;
+    color: #222;
+    outline: none;
+  }
+  .select-dropdown option,
+  .select-status option {
+    font-weight: normal;
+    font-size: 2rem;
+  }
+  
+  @media screen and (max-width: 980px) {
+    form .form-group {
+      flex: 1 100%;
+    }
+  
+    form .form-group button {
+      width: 100%;
+    }
+  
+    .task-list-wrapper {
+      flex-basis: 100%;
+    }
+  
+  }
+  
